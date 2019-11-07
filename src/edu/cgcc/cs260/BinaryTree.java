@@ -132,9 +132,11 @@ public class BinaryTree {
 	}
 	
 	private BSTNode bulkInsertSortedArray(int[] iArray, int low, int high) {
+		//base case: low never greater than high
 		if(low > high)
 			return null;
 		
+		//find mid and set to root
 		int mid = low + (high - low)/2;
 		BSTNode rt = new BSTNode(iArray[mid]);
 		
